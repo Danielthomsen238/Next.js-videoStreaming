@@ -15,7 +15,7 @@ function uploadVideoStream(req: NextApiRequest, res: NextApiResponse) {
   bb.on("file", (_: any, file: any, info: any) => {
     // auth-api.mp4
     const fileName = info.filename;
-    const filePath = `/videos/${fileName}`;
+    const filePath = `./public/videos/${fileName}`;
     console.log(filePath);
     const stream = fs.createWriteStream(filePath);
 
@@ -43,7 +43,7 @@ function getVideoStream(req: NextApiRequest, res: NextApiResponse) {
   const videoId = req.query.videoId;
   console.log(videoId);
 
-  const videoPath = `/videos/${videoId}.mp4`;
+  const videoPath = `./public/videos/${videoId}.mp4`;
 
   const videoSizeInBytes = fs.statSync(videoPath).size;
 
