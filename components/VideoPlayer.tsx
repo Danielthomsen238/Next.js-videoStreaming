@@ -1,13 +1,16 @@
 function VideoPlayer({ id }: { id: string }) {
   return (
-    <video
-      src={`/videos/${id}.mp4`}
-      width="800px"
-      height="auto"
-      controls
-      autoPlay
-      id="video-player"
-    />
+    <>
+      <h2>Video</h2>
+      <video
+        src={`/videos/${id}.mp4`}
+        width="800px"
+        height="auto"
+        controls
+        autoPlay
+        id="video-player"
+      />
+    </>
   );
 }
 
