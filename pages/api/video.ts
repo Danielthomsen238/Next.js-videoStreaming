@@ -43,7 +43,7 @@ function getVideoStream(req: NextApiRequest, res: NextApiResponse) {
   const videoId = req.query.videoId;
   console.log(videoId);
 
-  const videoPath = `/videos/${videoId}.mp4`;
+  const videoPath = `./public/videos/${videoId}.mp4`;
 
   const videoSizeInBytes = fs.statSync(videoPath).size;
 
