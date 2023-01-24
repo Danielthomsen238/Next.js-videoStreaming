@@ -1,8 +1,14 @@
-const Home = () => {
+import type { NextPage } from "next";
+
+import VideoUpload from "../components/VideoUpload";
+
+const Home: NextPage = () => {
   return (
-    <>
-      <h1>Hello from next</h1>
-    </>
+    <div>
+      <main>
+        <VideoUpload />
+      </main>
+    </div>
   );
 };
 
