@@ -1,7 +1,7 @@
 function VideoPlayer({ id }: { id: string }) {
   return (
     <video
-      src={`/api/video?videoId=${id}`}
+      src={`/videos/${id}.mp4`}
       width="800px"
       height="auto"
       controls
